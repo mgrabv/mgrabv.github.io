@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      id="pagestyle"
+      rel="stylesheet"
+      href="desktop_stylesheet.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Maciej Grabowski</title>
+  </head>
+  <body>
+    <div class="main page">
+      <div>
+        <img
+          class="profile-pic"
+          src="images/ProfilePic.png"
+          alt="Profile Photo"
+        />
+        <h2>Maciej Grabowski</h2>
+      </div>
+      <div>
+        <h1 id="typed"></h1>
+        <p class="animate__animated animate__fadeInDown animate__delay-2s">
+          Hi! I'm a Computer Science graduate.<br />
+          Got my degree in March, 2023.<br />
+          I'm currently available for hiring!
+        </p>
+      </div>
+      <div class="animate__animated animate__fadeInDown animate__delay-3s">
+        <h2>About Me:</h2>
+        <table>
+          <tr>
+            <td>
+              <strong>Location:</strong>
+            </td>
+            <td>Warsaw, Poland</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Education:</strong>
+            </td>
+            <td>
+              Bachelor, Databases Spec.<br />
+              <a href="https://pja.edu.pl"
+                ><img class="school-logo" src="images/pjatk.png" /> PJATK</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Languages:</strong>
+            </td>
+            <td>English C2 (CPE Certification), Polish (Native)</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="page completed-projects">
+      <h1 class="page-header">Completed Projects ⟶</h1>
+      <div class="vertical-centering">
+        <div class="projects">
+          <div class="project">
+            <div class="project-content">
+              <div>
+                <a href="https://sick.cash">
+                  <img
+                    class="project-logo animate__animated animate__pulse animate__infinite animate__slow"
+                    src="images/SickCash/SickCashLogo.svg"
+                    alt="SickCash Project Logo"
+                  />
+                </a>
+              </div>
+              <div>
+                <img
+                  class="screenshot"
+                  src="images/SickCash/SickCash_2.png"
+                  alt="Project Screenshot"
+                  onclick="openPopUpView('img', this.src)"
+                />
+                <img
+                  class="screenshot"
+                  src="images/SickCash/SickCash_5.jpg"
+                  alt="Project Screenshot"
+                  onclick="openPopUpView('img', this.src)"
+                />
+                <img
+                  class="screenshot"
+                  src="images/SickCash/SickCash_3.jpg"
+                  alt="Project Screenshot"
+                  onclick="openPopUpView('img', this.src)"
+                />
+                <br />
+                <img
+                  class="screenshot"
+                  src="images/SickCash/SickCash_4.jpg"
+                  alt="Project Screenshot"
+                  onclick="openPopUpView('img', this.src)"
+                />
+                <img
+                  class="screenshot"
+                  src="images/SickCash/SickCash_1.jpg"
+                  alt="Project Screenshot"
+                  onclick="openPopUpView('img', this.src)"
+                />
+                <img
+                  class="demo screenshot"
+                  src="images/SickCash/Demo_Placeholder.png"
+                  alt="Demo Video"
+                  onclick="openPopUpView('video', 'images/SickCash/SickCash_Demo.mp4')"
+                />
+              </div>
+            </div>
+            <div class="project-description">
+              <p>
+                My bachelor's degree thesis. Together with 2 of my colleagues,
+                we created an online multiplayer monopoly-like board game.<br /><br />
+                The majority of the game's logic has been implemented in a
+                PostgreSQL relational database. We have also created a front-end
+                React application for users to interact with the game.<br /><br />
+                My part was focused on working with an API (C#) that connected
+                the client app with our database, as well as the final E2E
+                testing of the game utilising Selenium solutions.<br /><br />
+                This version of our game can be found
+                <a href="https://sick.cash">here</a>. A new version is in
+                development, run solely by one of our thesis-group members.
+              </p>
+            </div>
+          </div>
+          <div class="project">
+            <h1>More coming soon!</h1>
+          </div>
+        </div>
+      </div>
+      <div class="pop-up-container">
+        <div class="pop-up-background" onclick="closePopUpView()"></div>
+        <img class="pop-up-content" />
+        <video class="pop-up-content" type="video/mp4" controls />
+      </div>
+      <div class="button-container">
+        <img
+          class="button"
+          id="back-button"
+          src="images/ArrowBack.png"
+          onclick="projectScroll(this.id)"
+        />
+        <img
+          class="button"
+          id="forward-button"
+          src="images/ArrowForward.png"
+          onclick="projectScroll(this.id)"
+        />
+      </div>
+    </div>
+    <div class="contact page">
+      <h1 class="page-header">Contact and Downloads</h1>
+      <div class="vertical-centering">
+        <div class="contact-info">
+          <div id="mail-icon" class="icon-container">
+            <a href="mailto:maciejgrabowski.it@gmail.com">
+              <img class="contact-info" src="images/EmailLogo.png" />
+            </a>
+            <p>maciejgrabowski.it@gmail.com</p>
+          </div>
+          <div id="phone-icon" class="icon-container">
+            <a href="tel:+48694231201">
+              <img class="contact-info" src="images/PhoneLogo.png" />
+            </a>
+            <p>+48 694 231 201</p>
+          </div>
+          <div id="document-icon" class="icon-container">
+            <a href="images/SickCash/SickCash_Demo.mp4" download="CV">
+              <img class="contact-info" src="images/DocumentLogo.png" />
+            </a>
+            <p>My CV</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

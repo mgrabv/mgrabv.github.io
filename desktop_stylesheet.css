@@ -1,0 +1,230 @@
+/* ============= MISCELLANEOUS ============= */
+
+h1 {
+  font-size: 3em;
+  text-decoration: underline rgb(38, 38, 239);
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(38, 128, 239);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  overflow-wrap: break-word;
+}
+
+div.completed-projects .page-header {
+  margin-left: 8vw;
+}
+
+/* ================ PAGES ================ */
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  background-color: rgb(35, 39, 39);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: auto;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+div.page {
+  min-height: 100vh;
+  min-width: 100vw;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+div.vertical-centering {
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Main Page */
+
+div.main {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  row-gap: 5vh;
+  align-items: center;
+  text-align: center;
+}
+
+img.profile-pic {
+  width: 300px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(38, 38, 239);
+  border-radius: 50%;
+}
+
+img.school-logo {
+  height: 1em;
+}
+
+table td {
+  text-align: center;
+  width: 15em;
+  height: 2.5em;
+}
+
+/* Completed Projects Page */
+
+div.completed-projects {
+  display: flex;
+  flex-flow: column;
+}
+
+div.projects {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  visibility: hidden;
+}
+
+div.projects::-webkit-scrollbar {
+  display: none;
+}
+
+div.project {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10vw;
+  min-width: 100vw;
+  height: 600px;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+div.project-content {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 5vh;
+  align-items: center;
+}
+
+img.project-logo {
+  width: 300px;
+}
+
+.screenshot {
+  width: 250px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #f23364;
+  border-radius: 3%;
+  margin: 10px;
+  transition: transform 0.2s;
+}
+
+.screenshot:hover {
+  transform: scale(1.5);
+}
+
+/* div.project-description {
+} */
+
+div.project-description p {
+  width: 30em;
+  text-align: left;
+  text-justify: auto;
+}
+
+div.button-container {
+  display: flex;
+  flex-flow: row;
+  column-gap: 5em;
+  justify-content: center;
+  margin: auto;
+  margin-top: 0;
+}
+
+img.button {
+  width: 50px;
+}
+
+img.button:hover {
+  cursor: pointer;
+}
+
+/* img#back-button {
+  visibility: hidden;
+} */
+
+div.pop-up-container,
+div.pop-up-background {
+  position: absolute;
+  left: 0;
+  min-height: 300vh;
+  min-width: 100vw;
+}
+
+div.pop-up-background {
+  top: 0;
+  background-color: rgb(0, 0, 0, 0.7);
+}
+
+div.pop-up-container {
+  display: none;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.pop-up-content {
+  max-height: 90vh;
+  position: absolute;
+}
+
+/* Contact and Downloads Page */
+
+div.contact {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+}
+
+div.contact-info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+  column-gap: 20vh;
+  visibility: hidden;
+}
+
+div.icon-container {
+  width: 200px;
+  height: 300px;
+}
+
+img.contact-info {
+  height: 100px;
+  margin: 2em;
+}

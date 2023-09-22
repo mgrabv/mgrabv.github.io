@@ -1,0 +1,197 @@
+/* ============= MISCELLANEOUS ============= */
+
+h1 {
+  font-size: 2em;
+  text-decoration: underline rgb(38, 38, 239);
+}
+
+h1.page-header {
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(38, 128, 239);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  text-align: center;
+  line-height: 1.25em;
+  overflow-wrap: break-word;
+}
+
+/* ================ PAGES ================ */
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  background-color: rgb(35, 39, 39);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: auto;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+div.page {
+  min-height: 100vh;
+  min-width: 100vw;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+div.vertical-centering {
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Main Page */
+
+div.main {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+}
+
+img.profile-pic {
+  width: 20vh;
+  height: 20vh;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(38, 38, 239);
+  border-radius: 50%;
+}
+
+table td {
+  text-align: center justify;
+  width: 15em;
+  height: 3.5em;
+}
+
+img.school-logo {
+  height: 1em;
+}
+
+/* Completed Projects Page */
+
+div.completed-projects {
+  display: flex;
+  flex-flow: column;
+}
+
+div.projects {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  visibility: hidden;
+}
+
+div.projects::-webkit-scrollbar {
+  display: none;
+}
+
+div.project {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  margin: auto;
+}
+
+div.project-content {
+  display: flex;
+  flex-flow: column;
+  row-gap: 5vh;
+  align-items: center;
+}
+
+div.project-description {
+  margin-top: 5vh;
+  height: 275px;
+  overflow: scroll;
+}
+
+div.project-description p {
+  max-width: 90vw;
+  text-align: justify center;
+  margin: auto;
+}
+
+img.project-logo {
+  width: 50vw;
+}
+
+.screenshot {
+  width: 25vw;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #f23364;
+  border-radius: 3%;
+  margin: 5px;
+}
+
+div.pop-up-container,
+div.pop-up-background {
+  position: absolute;
+  left: 0;
+  min-height: 300vh;
+  min-width: 100vw;
+}
+
+div.pop-up-background {
+  background-color: rgb(0, 0, 0, 0.7);
+}
+
+div.pop-up-container {
+  display: none;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.pop-up-content {
+  max-width: 95vw;
+  position: absolute;
+}
+
+/* Contact and Downloads Page */
+
+div.contact {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+
+div.contact-info {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  row-gap: 8vh;
+  visibility: hidden;
+}
+
+img.contact-info {
+  height: 10vh;
+}
